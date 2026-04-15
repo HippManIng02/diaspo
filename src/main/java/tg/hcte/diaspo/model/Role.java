@@ -23,6 +23,4 @@ public class Role {
 
     private String fieldType;
 
-    @ManyToMany(mappedBy = "roles")
-    private Set<User> users = new HashSet<>();
 }
