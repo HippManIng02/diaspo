@@ -35,8 +35,7 @@ build/
 # Environment variables
 .env
 
-# Spring Boot config local
-application-dev.properties
+
 
 # Logs
 *.log
