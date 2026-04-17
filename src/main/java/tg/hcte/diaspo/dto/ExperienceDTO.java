@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import tg.hcte.diaspo.model.Experience;
+import tg.hcte.diaspo.model.User;
 
 import java.time.LocalDate;
 
@@ -19,6 +20,7 @@ public class ExperienceDTO {
     private LocalDate dateDebut;
     private LocalDate dateFin;
     private String description;
+    private Long userID;
 
     public static ExperienceDTO fromEntity(Experience experience){
         return ExperienceDTO.builder()
@@ -28,6 +30,7 @@ public class ExperienceDTO {
                 .dateDebut(experience.getDateDebut())
                 .dateFin(experience.getDateFin())
                 .description(experience.getDescription())
+                .userID(experience.getUser().getId())
                 .build();
     }
 
@@ -39,6 +42,11 @@ public class ExperienceDTO {
                 .dateDebut(dto.getDateDebut())
                 .dateFin(dto.getDateFin())
                 .description(dto.getDescription())
+                .user(
+                        User.builder()
+                                .id(dto.getUserID())
+                                .build()
+                )
                 .build();
     }
 }

@@ -1,14 +1,15 @@
 package tg.hcte.diaspo.services;
 
+import tg.hcte.diaspo.dto.UserDTO;
 import tg.hcte.diaspo.model.User;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface UserService {
-    List<User> getAllUsers();
-    Optional<User> getUserById(Long id);
-    User saveUser(User user);
-    User updateUser(Long id, User user);
+    List<UserDTO> getAllUsers();
+    UserDTO getUserById(Long id);
+    Long saveUser(UserDTO user);
+    UserDTO updateUser(Long id, UserDTO user);
     void deleteUser(Long id);
 }
