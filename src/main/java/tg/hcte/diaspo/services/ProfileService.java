@@ -1,14 +1,15 @@
 package tg.hcte.diaspo.services;
 
+import tg.hcte.diaspo.dto.ProfileDTO;
 import tg.hcte.diaspo.model.Profile;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface ProfileService {
-    List<Profile> getAllProfiles();
-    Optional<Profile> getProfileById(Long id);
-    Profile saveProfile(Profile profile);
-    Profile updateProfile(Long id, Profile profile);
+    List<ProfileDTO> getAllProfiles();
+    ProfileDTO getProfileById(Long id);
+    Long saveProfile(ProfileDTO profile);
+    ProfileDTO updateProfile(Long id, ProfileDTO profile);
     void deleteProfile(Long id);
 }

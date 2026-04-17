@@ -13,6 +13,7 @@ public class LangueDTO {
     private String name;
     private String level;
 
+
     public static LangueDTO fromEnity(Langue langue){
             return LangueDTO.builder()
                     .id(langue.getId())

@@ -35,8 +35,11 @@ build/
 # Environment variables
 .env
 
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 # Logs
 *.log
 
